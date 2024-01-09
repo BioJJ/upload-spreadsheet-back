@@ -1,7 +1,8 @@
-import { NestFactory } from '@nestjs/core'
-import { AppModule } from './app.module'
 import { ValidationPipe } from '@nestjs/common'
+import { NestFactory } from '@nestjs/core'
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'
+
+import { AppModule } from './app.module'
 
 async function bootstrap() {
 	const app = await NestFactory.create(AppModule)
@@ -15,7 +16,7 @@ async function bootstrap() {
 
 	const config = new DocumentBuilder()
 		.setTitle('backend')
-		.setDescription('Desenvolvimento de Sistema de Gerenciamento.')
+		.setDescription('Upload Spreadsheet Back.')
 		.setVersion('1.0')
 		.build()
 
